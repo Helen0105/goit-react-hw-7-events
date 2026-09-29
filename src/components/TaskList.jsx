@@ -1,5 +1,6 @@
 import { Component } from "react";
-
+import { Title } from "./TaskLink.styled";
+import { Button } from "./TaskLink.styled";
 // tasks = [
 //       { id: 1, text: "Вивчити React" },
 //       { id: 2, text: "Розібратися з класовими компонентами" },
@@ -56,14 +57,14 @@ class TaskList extends Component {
   render() {
     return (
       <div>
-        <h2>Список завдань на сьогодні</h2>
+        <Title>Список завдань на сьогодні</Title>
         <ul>
           {this.tasks.map((task) => (
             <li key={task.id}>
               {task.text}{" "}
-              <button onClick={() => this.handleDelete(task.id)}>
+              <Button onClick={() => this.handleDelete(task.id)}>
                 Видалити
-              </button>
+              </Button>
             </li>
           ))}
         </ul>
